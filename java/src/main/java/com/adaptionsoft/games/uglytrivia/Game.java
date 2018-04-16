@@ -35,10 +35,10 @@ public class Game {
 	}
 
 	public boolean add(String playerName) {
-		
-		
-	    players.add(playerName);
-	    places[howManyPlayers()] = 0;
+
+
+		addPlayerName(playerName);
+		places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
 	    inPenaltyBox[howManyPlayers()] = false;
 	    
@@ -46,7 +46,11 @@ public class Game {
 	    System.out.println("They are player number " + players.size());
 		return true;
 	}
-	
+
+	private void addPlayerName(String playerName) {
+		players.add(playerName);
+	}
+
 	public int howManyPlayers() {
 		return players.size();
 	}
